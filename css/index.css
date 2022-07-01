@@ -1,0 +1,27 @@
+:root{
+    --fontOverPass: 'Overpass', sans-serif;
+    --fontUbuntu: 'Ubuntu', sans-serif;
+
+    --light-red-CTA-text: hsl(356, 100%, 66%);
+    --very-light-red-CTA-hover: hsl(355, 100%, 74%);
+    --very-dark-blue-headings: hsl(208, 49%, 24%);
+
+    --grayish-blue-footer-text: hsl(240, 2%, 79%);
+    --very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
+    --very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
+
+    /*Background gradient - Intro/CTA mobile nav:*/
+    --very-light-red-gradient: hsl(13, 100%, 72%);
+    --light-red-gradient: hsl(353, 100%, 62%);
+
+    /*Background gradient - body:*/
+    --very-bark-bray-blue-gradient: hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue-gradient: hsl(237, 23%, 32%);
+}
+
+*,*::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
