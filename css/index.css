@@ -69,9 +69,15 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
 
+    position: fixed;
+
+    background-image:  linear-gradient(150deg, var(--very-light-red-gradient), var(--light-red-gradient));
+    width: 100%;
+
+}
 .open-close-nav-btn{
+    display: inline-block;
     background-image: url('../images/icon-hamburger.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -82,10 +88,10 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: none;
 
     background-color: white;
     width: 80%;
-    margin: auto;
     padding: 1.5em 0;
     
     border-radius: 10px;
@@ -94,6 +100,32 @@ nav{
 
 nav>*{
     text-align: center;
+}
+
+[data-nav-active]{
+    display: flex;
+
+    position: fixed;
+    top: 10%;
+    right: 0;
+    left: 0;
+
+    margin: auto auto;
+
+    animation: nav-active 350ms forwards;
+}
+
+[data-nav-close]{
+    display: flex;
+
+    position: fixed;
+    top: 10%;
+    right: 0;
+    left: 0;
+
+    margin: auto auto;
+
+    animation: nav-close 350ms forwards;
 }
 
 .nav__option>*{
@@ -128,6 +160,14 @@ nav>*{
     background-color: lightgray;
 }
 
+.drop-btn{
+}
+
+.drop-btn::after{
+    content: url('../images/icon-arrow-dark.svg');
+    margin-left: 0.2em;
+}
+
 .drop-menu{
     display: none;
 
@@ -145,4 +185,27 @@ nav>*{
 .drop-menu__link{
     font-size: clamp(1.1rem, 1.3vw, 1.6rem);
     color: var(--very-dark-grayish-blue-body-copy);
+}
+
+
+@keyframes nav-active{
+    from{
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(auto);
+        opacity: 1;
+    }
+}
+
+@keyframes nav-close{
+    from{
+        transform: translateY(auto);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-10%);
+        opacity: 0;  
+    }
 }
