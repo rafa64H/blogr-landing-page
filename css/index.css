@@ -61,16 +61,17 @@ hr{
 header{
     background-image: url('../images/bg-pattern-intro-mobile.svg'), 
                       linear-gradient(150deg, var(--very-light-red-gradient), var(--light-red-gradient));
-    background-size: 100%;
     background-repeat: no-repeat;
+    background-position-x: 10%;
+    background-position-y: 45%;
+
+    border-bottom-left-radius: 20%;
 }
 
 .logo-nav-btn-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    position: fixed;
 
     background-image:  linear-gradient(150deg, var(--very-light-red-gradient), var(--light-red-gradient));
     width: 100%;
@@ -82,6 +83,10 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     padding: 2em;
+}
+
+[data-nav-btn-active]{
+    background-image: url('../images/icon-close.svg');
 }
 
 nav{
@@ -105,7 +110,7 @@ nav>*{
 [data-nav-active]{
     display: flex;
 
-    position: fixed;
+    position: absolute;
     top: 10%;
     right: 0;
     left: 0;
@@ -140,6 +145,13 @@ nav>*{
     margin: 0.4em 0;
 }
 
+.nav__link--login{
+    transition: all 350ms;
+}
+.nav__link--login:focus{
+    color: var(--very-dark-grayish-blue-body-copy);
+}
+
 .nav__option--signup{
     margin: 0.4em 0;
 }
@@ -161,6 +173,10 @@ nav>*{
 }
 
 .drop-btn{
+    transition: all 350ms;
+}
+.drop-btn:focus{
+    color: var(--very-dark-grayish-blue-body-copy);
 }
 
 .drop-btn::after{
@@ -178,6 +194,15 @@ nav>*{
     border-radius: 10px;
 }
 
+[data-drop-active]{
+    display: block;
+    animation: drop-active 350ms forwards;
+}
+
+[data-drop-close]{
+    animation: drop-close 350ms forwards;
+}
+
 .drop-menu__option{
     margin: 0.6em 0;
 }
@@ -185,6 +210,66 @@ nav>*{
 .drop-menu__link{
     font-size: clamp(1.1rem, 1.3vw, 1.6rem);
     color: var(--very-dark-grayish-blue-body-copy);
+}
+
+
+.hero{
+    padding: 4em 1em;
+
+    text-align: center;
+    color: #fff;
+}
+
+.hero__title{
+    margin: 0.5em 0;
+
+    font-family: var(--fontOverPass);
+    font-size: clamp(1.7rem, 3vw, 4rem);
+}
+
+.hero__description{
+    margin: 0.5em 0;
+
+    font-family: var(--fontOverPass);
+    font-size: clamp(1.2rem, 1.6vw, 2rem);
+}
+
+.hero__btns{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    margin: 3em auto;
+}
+
+.hero__btn{
+    display: inline-block;
+
+    border: 1px solid #fff;
+    padding: 0.7em 1em;
+    margin: 0.2em auto;
+
+    font-family: var(--fontOverPass);
+    font-size: clamp(1.1rem, 1.2vw, 1.6rem);
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+
+    transition: all 350ms;
+
+    border-radius: 30px;
+}
+.hero__btn:focus{
+    background-color: #fff;
+    color: var(--light-red-gradient);
+}
+.hero__btn--1{
+    background-color: #fff;
+    color: var(--light-red-gradient);
+}
+.hero__btn--1:focus{
+    background-color: transparent;
+    color: #fff;
 }
 
 
@@ -207,5 +292,27 @@ nav>*{
     to{
         transform: translateY(-10%);
         opacity: 0;  
+    }
+}
+
+@keyframes drop-active{
+    from{
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes drop-close{
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-10%);
     }
 }
