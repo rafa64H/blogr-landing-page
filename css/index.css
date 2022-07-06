@@ -79,14 +79,17 @@ header{
 }
 .open-close-nav-btn{
     display: inline-block;
-    background-image: url('../images/icon-hamburger.svg');
     background-position: center;
     background-repeat: no-repeat;
     padding: 2em;
 }
 
-[data-nav-btn-active]{
+[data-nav-btn-active = "true"]{
     background-image: url('../images/icon-close.svg');
+}
+
+[data-nav-btn-active = "false"]{
+    background-image: url('../images/icon-hamburger.svg');
 }
 
 nav{
@@ -107,7 +110,7 @@ nav>*{
     text-align: center;
 }
 
-[data-nav-active]{
+[data-nav-active = "true"]{
     display: flex;
 
     position: absolute;
@@ -120,10 +123,10 @@ nav>*{
     animation: nav-active 350ms forwards;
 }
 
-[data-nav-close]{
+[data-nav-active = "false"]{
     display: flex;
 
-    position: fixed;
+    position: absolute;
     top: 10%;
     right: 0;
     left: 0;
@@ -179,9 +182,17 @@ nav>*{
     color: var(--very-dark-grayish-blue-body-copy);
 }
 
-.drop-btn::after{
-    content: url('../images/icon-arrow-dark.svg');
-    margin-left: 0.2em;
+.drop-arrow{
+    transform: translateY(100%);
+}
+
+[data-drop-arrow-active = "true"]{
+    transform: translateY(100%);
+    animation: drop-arrow-open 350ms forwards;
+}
+[data-drop-arrow-active = "false"]{
+    transform: translateY(100%);
+    animation: drop-arrow-close 350ms forwards;
 }
 
 .drop-menu{
@@ -194,12 +205,13 @@ nav>*{
     border-radius: 10px;
 }
 
-[data-drop-active]{
+[data-drop-animation = "true"]{
     display: block;
     animation: drop-active 350ms forwards;
 }
 
-[data-drop-close]{
+[data-drop-animation = "false"]{
+    display: block;
     animation: drop-close 350ms forwards;
 }
 
@@ -214,7 +226,7 @@ nav>*{
 
 
 .hero{
-    padding: 4em 1em;
+    padding: 3em 1em;
 
     text-align: center;
     color: #fff;
@@ -314,5 +326,23 @@ nav>*{
     to{
         opacity: 0;
         transform: translateY(-10%);
+    }
+}
+
+@keyframes drop-arrow-open{
+    from{
+        transform: translateY(50%);
+    }
+    to{
+        transform: rotate(-180deg) translateY(-50%);
+    }
+}
+
+@keyframes drop-arrow-close{
+    from{
+        transform: rotate(-180deg) translateY(-50%);
+    }
+    to{
+        transform: rotate(0deg) translateY(50%);
     }
 }
