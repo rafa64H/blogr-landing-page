@@ -39,35 +39,23 @@ dropBtns.forEach(allTheDropBtns => {
 });
 
 function openDropMenu(event){
-    
-    let productDropBtn = dropBtns[0]
-    let companyDropBtn = dropBtns[1]
-    let connectDropBtn = dropBtns[2]
 
-    let productDropMenu = dropMenus [0]
-    let companyDropMenu = dropMenus [1]
-    let connectDropMenu = dropMenus [2]
+    for (let i = 0; i < dropMenus.length; i++) {
+        
+        if (event.target === dropBtns[i] && dropMenus[i].dataset.dropActive === "false"){
 
-    let productDropArrowIcon = dropArrowIcons[0]
-    let companyDropArrowIcon = dropArrowIcons[1]
-    let connectDropArrowIcon = dropArrowIcons[2]
+            dropMenus[i].dataset.dropAnimation = "true"
+            dropArrowIcons[i].dataset.dropArrowActive = "true"
+            dropMenus[i].dataset.dropActive = "true"
 
-    switch (event.target){
-        case productDropBtn:
+        } 
+        else if (dropMenus[i].dataset.dropActive === "true"){
             
-            if(productDropMenu.dataset.dropActive === "false"){
-
-                productDropMenu.dataset.dropAnimation = "true"
-                productDropArrowIcon.dataset.dropArrowActive = "true"
-                productDropMenu.dataset.dropActive = "true"
-
-            } else {
-                productDropMenu.dataset.dropAnimation = "false"
-                productDropArrowIcon.dataset.dropArrowActive = "false"
-                productDropMenu.dataset.dropActive = "false"
-            }
-
-            break;
+            dropMenus[i].dataset.dropAnimation = "false"
+            dropArrowIcons[i].dataset.dropArrowActive = "false"
+            dropMenus[i].dataset.dropActive = "false"
+        }
+        
     }
 
 }
