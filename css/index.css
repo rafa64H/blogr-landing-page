@@ -221,6 +221,11 @@ nav{
 
 .drop-arrow{
     transform: translateY(100%);
+    user-select: none;
+}
+
+.drop-arrow2{
+    display: none;
 }
 
 [data-drop-arrow-active = "true"]{
@@ -351,8 +356,8 @@ nav{
 
     padding: 8em 0;
 
-    border-bottom-left-radius: 25%;
-    border-top-right-radius: 25%;
+    border-bottom-left-radius: 15%;
+    border-top-right-radius: 15%;
 
 }
 
@@ -418,9 +423,322 @@ footer>*{
 }
 
 .section2__link{
-
+    color: #ae8d19;
 }
 
+/*--------------MEDIA QUERY------------*/
+@media screen and (min-width: 1200px) {
+    header{
+        background-image: url('../images/bg-pattern-intro-desktop.svg'), 
+                          linear-gradient(150deg, var(--very-light-red-gradient), var(--light-red-gradient));
+        background-repeat: no-repeat;
+        background-position-x: 10%;
+        background-position-y: 45%;
+    
+        border-bottom-left-radius: 20%;
+    }
+    
+    .logo-nav-btn-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        width: 100%;
+        padding: 1em 3em;
+    }
+    
+    .open-close-nav-btn{
+        display: none;
+    }
+    
+    nav{
+        display: block;
+        background-color: red;
+    
+        background-color: transparent;
+        width: 100%;
+        
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .nav__options{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__option{
+        margin-left: 2em;
+    }
+
+    .nav__option>*{
+        color: #fff;
+    }
+    
+    .nav__option--login{
+        margin-left: 50%;
+
+    }
+    
+    .nav__link--login{
+        color: rgb(216, 216, 216);
+        font-weight: 900;
+
+        transition: all 350ms;
+    }
+    .nav__link--login:hover{
+        color: #fff;
+    }
+    
+    .nav__option--signup{
+        color: #fff;
+    }
+    
+    .nav__link--signup{
+        display: inline-block;
+    
+        padding: 0.75em 2em;
+        background-image: none;
+        background-color: #fff;
+
+        color: var(--light-red-gradient);
+        font-weight: 900;
+    
+        border-radius: 30px;
+    }
+    
+    #divide-line{
+        display: none;
+    }
+    
+    .drop-btn{
+        color: rgb(216, 216, 216);
+        font-weight: 900;
+
+        transition: all 350ms;
+    }
+    .drop-btn:focus{
+        color: rgb(216, 216, 216);
+    }
+    .drop-btn:hover{
+        color: #fff;
+    }
+    .drop-btn:active{
+        color: #fff;
+    }
+
+    .drop-arrow{
+        user-select: none;
+    }
+
+    .drop-arrow1{
+        display: none;
+    }
+    
+    .drop-arrow2{
+        display: inline-block;
+
+        margin-left: -0.3em;
+    }
+    
+    .drop-menu{
+        display: none;
+    
+        background-color: #fff;
+        width: auto;
+        padding: 2em 2em 2em 1em;
+    
+        border-radius: 10px;
+    }
+    
+    [data-drop-animation = "true"]{
+        display: block;
+        position: absolute;
+
+        animation: drop-active 350ms forwards;
+    }
+    
+    [data-drop-animation = "false"]{
+        display: block;
+        position: absolute;
+
+        animation: drop-close 350ms forwards;
+    }
+    
+    .drop-menu__option{
+        margin: 0.6em 0;
+        text-align: left;
+    }
+    
+    .drop-menu__link{
+        color: var(--very-dark-grayish-blue-body-copy);
+    }
+    
+    
+    .hero{
+        padding: 3em 1em;
+    
+        color: #fff;
+    }
+    
+    .hero__title{
+        margin: 0.5em auto;
+        
+        font-family: var(--fontOverPass);
+    }
+    
+    .hero__description{
+        margin: 0.5em auto;
+    
+        color: #fff;
+        font-family: var(--fontOverPass);
+    }
+    
+    .hero__btns{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    
+        margin: 3em auto;
+    }
+    
+    .hero__btn{
+        display: inline-block;
+    
+        border: 1px solid #fff;
+        padding: 0.7em 1em;
+        margin: 0.2em auto;
+    
+        font-family: var(--fontOverPass);
+        color: #fff;
+        font-weight: 900;
+    
+        transition: all 350ms;
+    
+        border-radius: 30px;
+    }
+    .hero__btn:hover{
+        background-image: linear-gradient(90deg, var(--very-light-red-gradient) 25%, var(--light-red-gradient));
+        border: 1px solid var(--very-light-red-gradient);
+        color: #fff;
+    }
+    
+    .hero__btn--1{
+        background-color: #fff;
+        color: var(--light-red-gradient);
+    }
+    .hero__btn--1:hover{
+        background-image: linear-gradient(90deg, var(--very-light-red-gradient) 25%, var(--light-red-gradient));
+        border: 1px solid var(--very-light-red-gradient);
+        color: #fff;
+    }
+    
+    .content{
+        margin: 4em auto;
+    }
+    
+    .content__title{
+        margin-bottom: 1.5em;
+    }
+    
+    .content__img{
+        display: block;
+    
+        margin: 0 auto;
+    }
+    
+    .content__text{
+        padding: 0 1.5em;
+    }
+    
+    .text__title{
+        margin: 1em auto;
+    }
+    
+    .content2{
+        position: relative;
+        margin-top: 2em;
+    }
+    
+    .content2__bgimg{
+        background-image: url('../images/bg-pattern-circles.svg'),
+                          linear-gradient(var(--very-dark-bray-blue-gradient), 60%, var(--very-dark-desaturated-blue-gradient));;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    
+        padding: 8em 0;
+    
+        border-bottom-left-radius: 15%;
+        border-top-right-radius: 15%;
+    
+    }
+    
+    .content2__img{
+        display: block;
+        margin: 0 auto -11em auto;
+    }
+    
+    .content2__text{
+        background-position: 0 0;
+    }
+    .content2__text>*{
+        color: #fff !important;
+    
+        margin: 1em auto;
+    }
+    
+    footer{
+        background-color: var(--very-dark-black-blue-footer-background);
+    
+        padding: 3em 1em 1em 1em;
+    
+        border-top-right-radius: 5rem;
+    }
+    footer>*{
+        color: #fff;
+    }
+    
+    .section1__logo{
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .section1__items{
+        margin: 2em auto;
+    }
+    
+    .item__title{
+        margin-bottom: 1em;
+    
+        text-align: center;
+    }
+    
+    .item__links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .item__link{
+        display: inline-block;
+    
+        margin: 0.2em auto;
+    
+        color: #fff;
+    }
+    .item__link:focus{
+        text-decoration: underline;
+    }
+    
+    .section2__p{
+        color: #fff;
+    }
+    
+    .section2__link{
+        color: #ae8d19;
+    }
+}
+/*--------------MEDIA QUERY END------------*/
 
 
 @keyframes nav-active{
