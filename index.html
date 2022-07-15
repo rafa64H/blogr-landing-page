@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!--Fonts import-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,
+  wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,2
+  00;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,
+  300;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
   
+  <!--CSS and js files-->
   <link rel="stylesheet" href="css/index.css">
   <script src="js/index.js" defer></script>
 
@@ -16,24 +21,27 @@
 </head>
 <body>
 
+  <!--Header-->
   <header>
-    
+
+    <!--Logo and button to open nav-->
     <div class="logo-nav-btn-container">
       <img src="images/logo.svg" alt="" class="logo">
       <button class="open-close-nav-btn" data-nav-btn-active="false"></button>
     </div>
+    <!--Logo and button to open nav END-->
 
     <nav>
 
-      <ul class="nav__options">
+      <ul class="nav__options"> <!--Flex container-->
 
         <li class="nav__option">
 
-          <button class="drop-btn">Product</button>  
-          <img src="images/icon-arrow-dark.svg" alt="" class="drop-arrow drop-arrow1">
+          <button class="drop-btn">Product</button> <!--button to open drop-menu-->
+          <img src="images/icon-arrow-dark.svg" alt="" class="drop-arrow drop-arrow1"> 
           <img src="images/icon-arrow-light.svg" alt="" class="drop-arrow drop-arrow2">          
 
-          <ul class="drop-menu" data-drop-active="false">
+          <ul class="drop-menu" data-drop-active="false"> <!--dropdown menu-->
 
             <li class="drop-menu__option">
               <a href="" class="drop-menu__link">Overview</a>
@@ -61,11 +69,11 @@
 
         <li class="nav__option">
 
-          <button class="drop-btn">Company</button>
+          <button class="drop-btn">Company</button> <!--button to open drop-menu-->
           <img src="images/icon-arrow-dark.svg" alt="" class="drop-arrow drop-arrow1">
           <img src="images/icon-arrow-light.svg" alt="" class="drop-arrow drop-arrow2">         
 
-          <ul class="drop-menu" data-drop-active="false">
+          <ul class="drop-menu" data-drop-active="false"> <!--dropdown menu-->
 
             <li class="drop-menu__option">
               <a href="" class="drop-menu__link">About</a>
@@ -89,11 +97,11 @@
 
         <li class="nav__option">
 
-          <button class="drop-btn">Connect</button>
+          <button class="drop-btn">Connect</button> <!--button to open drop-menu-->
           <img src="images/icon-arrow-dark.svg" alt="" class="drop-arrow drop-arrow1">
           <img src="images/icon-arrow-light.svg" alt="" class="drop-arrow drop-arrow2">      
 
-          <ul class="drop-menu" data-drop-active="false">
+          <ul class="drop-menu" data-drop-active="false"> <!--dropdown menu-->
 
             <li class="drop-menu__option">
               <a href="" class="drop-menu__link">Contact</a>
@@ -111,9 +119,9 @@
 
         </li>
 
-        <div id="divide-line"></div> 
+        <div id="divide-line"></div> <!--A small gray line between "Connect" and "Log in"--> 
 
-        <div class="login-signup-container">
+        <div class="login-signup-container"> <!--Flex container-->
           <li class="nav__option nav__option--login">
             <a href="" class="nav__link nav__link--login">Log in</a>
           </li>
@@ -127,6 +135,8 @@
 
     </nav>
 
+
+    <!--Hero section-->
     <section class="hero">
 
       <h1 class="hero__title">
@@ -137,20 +147,24 @@
         Grow your audience and build your online brand
       </p>
 
-      <div class="hero__btns">
-        <a href="" class="hero__btn hero__btn--1">Start for Free</a>
-        <a href="" class="hero__btn">Learn More</a>
+      <div class="hero__btns"> <!--Flex container-->
+        <a href="#" class="hero__btn">Start for Free</a>
+        <a href="#" class="hero__btn hero__btn--2">Learn More</a>
       </div>
 
     </section>
+    <!--Hero section END-->
 
   </header>
+  <!--Header END-->
+
 
   <h2 class="title">
     Designed for the future
   </h2>
 
-  <section class="content">
+  <!--Content with illustration editor image-->
+  <section class="content"> <!--Flex container-->
 
     <img src="images/illustration-editor-mobile.svg" alt="Ilustration of editor" class="content__img">
     <img src="images/illustration-editor-desktop.svg" alt="Ilustration of editor" class="content__img--2">
@@ -174,14 +188,16 @@
 
       <p class="text__p">
         Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.          
+        by adding customized categories, sections, format, or flow. With this functionality, you're in full control.          
       </p>
 
     </div>
 
   </section>
+  <!--Content with illustration editor image END-->
 
 
+  <!--Content with phones illustration-->
   <section class="content2">
 
     <img src="images/illustration-phones.svg" alt="" class="content2__img">
@@ -204,12 +220,14 @@
     </div>
     
   </section>
+  <!--Content with phones illustration END-->
 
-  
-  <section class="content content--laptop-illus">
+  <!--Content with laptop illustration-->
+  <section class="content content--laptop-illus"> <!--Flex container-->
 
     <img src="images/illustration-laptop-mobile.svg" alt="A drawing of a laptop" class="content__img">
-    <img src="images/illustration-laptop-desktop.svg" alt="A drawing of a laptop" class="content__img content__img--2 content__img--laptop">
+    <img src="images/illustration-laptop-desktop.svg" alt="A drawing of a laptop" 
+    class="content__img content__img--2 content__img--laptop">
 
     <div class="content__text content__text--2">
 
@@ -235,78 +253,81 @@
     </div>
 
   </section>
+  <!--Content with laptop illustration END-->
 
 
+  <!--Footer-->
   <footer>
 
-    <section class="footer-section1">
+    <section class="footer-section1"> <!--Flex container-->
 
-      <img src="images/logo.svg" alt="Company logo" class="logo section1__logo">
+      <img src="images/logo.svg" alt="Company logo" class="logo footer-section1__logo">
 
-      <div class="section1__items section1__items--1">
+      <div class="footer-section1__items footer-section1__items--1">
 
-        <h3 class="item__title">
+        <h3 class="foo1-item__title">
           Product
         </h3>
 
-        <div class="item__links">
+        <div class="foo1-item__links">
 
-          <a href="" class="item__link">Overview</a>
-          <a href="" class="item__link">Pricing</a>
-          <a href="" class="item__link">Marketplace</a>
-          <a href="" class="item__link">Features</a>
-          <a href="" class="item__link">Integrations</a>
+          <a href="" class="foo1-item__link">Overview</a>
+          <a href="" class="foo1-item__link">Pricing</a>
+          <a href="" class="foo1-item__link">Marketplace</a>
+          <a href="" class="foo1-item__link">Features</a>
+          <a href="" class="foo1-item__link">Integrations</a>
 
         </div>
 
       </div>
       
-      <div class="section1__items">
+      <div class="footer-section1__items">
 
-        <h3 class="item__title">
+        <h3 class="foo1-item__title">
           Company
         </h3>
 
-        <div class="item__links">
+        <div class="foo1-item__links">
 
-          <a href="" class="item__link">About</a>
-          <a href="" class="item__link">Team</a>
-          <a href="" class="item__link">Blog</a>
-          <a href="" class="item__link">Careers</a>
+          <a href="" class="foo1-item__link">About</a>
+          <a href="" class="foo1-item__link">Team</a>
+          <a href="" class="foo1-item__link">Blog</a>
+          <a href="" class="foo1-item__link">Careers</a>
 
         </div>
 
       </div>
       
-      <div class="section1__items">
+      <div class="footer-section1__items">
 
-        <h3 class="item__title">
+        <h3 class="foo1-item__title">
           Connect
         </h3>
         
-        <div class="item__links">
+        <div class="foo1-item__links">
 
-          <a href="" class="item__link">Contact</a>
-          <a href="" class="item__link">Newsletter</a>
-          <a href="" class="item__link">LinkedIn</a>
+          <a href="" class="foo1-item__link">Contact</a>
+          <a href="" class="foo1-item__link">Newsletter</a>
+          <a href="" class="foo1-item__link">LinkedIn</a>
 
         </div>
 
       </div>
     
     </section>
-
+    
     
     <section class="footer-section2">
 
-      <p class="section2__p">
+      <p class="footer-section2__p">
         Challenge by 
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="section2__link">
-          Frontend Mentor</a>. Coded by <a href="#" class="section2__link">Rafael Pacheco</a>.
+          Frontend Mentor</a>. Coded by <a href="#" class="footer-section2__link">Rafael Pacheco</a>.
       </p>
 
     </section>
 
   </footer>
+  <!--Footer END-->
 </body>
 </html>

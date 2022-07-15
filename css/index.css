@@ -137,9 +137,6 @@ header{
 }
 
 nav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     display: none;
 
     background-color: white;
@@ -151,7 +148,7 @@ nav{
 }
 
 [data-nav-active = "true"]{
-    display: flex;
+    display: block;
 
     position: absolute;
     top: 11%;
@@ -164,7 +161,7 @@ nav{
 }
 
 [data-nav-active = "false"]{
-    display: flex;
+    display: block;
 
     position: absolute;
     top: 11%;
@@ -300,7 +297,7 @@ nav{
 
 .hero__btns{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     margin: 3em auto;
@@ -312,34 +309,39 @@ nav{
     border: 1px solid #fff;
     padding: 0.7em 1em;
     margin: 0.2em auto;
+    background: #fff;
 
     font-family: var(--fontOverPass);
-    color: #fff;
-    font-weight: 900;
+    color: var(--light-red-CTA-text);
+    font-weight: 600;
 
     transition: all 350ms;
 
     border-radius: 30px;
 }
 .hero__btn:focus{
-    background-color: #fff;
-    color: var(--light-red-gradient);
-}
-.hero__btn--1{
-    background-color: #fff;
-    color: var(--light-red-gradient);
-}
-.hero__btn--1:focus{
-    background-color: transparent;
+    background: linear-gradient(90deg, var(--very-light-red-gradient) 25%, var(--light-red-gradient));
+    border: 1px solid var(--very-light-red-gradient);
     color: #fff;
 }
 
-.content{
-    margin: 4em auto;
+.hero__btn--2{
+    background: transparent;
+    color: #fff;
 }
+.hero__btn--2:focus{
+    background: #fff;
+    color: var(--light-red-CTA-text);
+}
+
 
 .title{
     margin: 1.5em;
+}
+
+
+.content{
+    margin: 4em auto;
 }
 
 .content__img{
@@ -359,6 +361,7 @@ nav{
 .text__title{
     margin: 1em auto;
 }
+
 
 .content2{
     position: relative;
@@ -404,46 +407,47 @@ footer>*{
     color: #fff;
 }
 
-.section1__logo{
+.footer-section1__logo{
     display: block;
     margin: 0 auto;
 }
 
-.section1__items{
+.footer-section1__items{
     margin: 2em auto;
 }
 
-.item__title{
+.foo1-item__title{
     margin-bottom: 1em;
 
     text-align: center;
 }
 
-.item__links{
+.foo1-item__links{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.item__link{
+.foo1-item__link{
     display: inline-block;
 
     margin: 0.2em auto;
 
     color: #fff;
 }
-.item__link:focus{
+.foo1-item__link:focus{
     text-decoration: underline;
 }
 
-.section2__p{
+
+.footer-section2__p{
     color: #fff;
 }
 
-.section2__link{
+.footer-section2__link{
     color: #ae8d19;
 }
-.section2__link:focus{
+.footer-section2__link:focus{
     text-decoration: underline;
 }
 
@@ -667,9 +671,10 @@ footer>*{
         border: 1px solid #fff;
         padding: 0.7em 1em;
         margin: 0.2em auto;
+        background-color: #fff;
     
         font-family: var(--fontOverPass);
-        color: #fff;
+        color: var(--light-red-gradient);
         font-weight: 900;
     
         transition: all 350ms;
@@ -677,20 +682,31 @@ footer>*{
         border-radius: 30px;
     }
     .hero__btn:hover{
-        background-image: linear-gradient(90deg, var(--very-light-red-gradient) 25%, var(--light-red-gradient));
-        border: 1px solid var(--very-light-red-gradient);
-        color: #fff;
-    }
-    
-    .hero__btn--1{
-        background-color: #fff;
-        color: var(--light-red-gradient);
-    }
-    .hero__btn--1:hover{
         background: var(--very-light-red-CTA-hover);
         border: 1px solid var(--very-light-red-gradient);
         color: #fff;
     }
+    .hero__btn:focus{
+        background: var(--very-light-red-CTA-hover);
+        border: 1px solid var(--very-light-red-gradient);
+        color: #fff;
+    }
+
+    .hero__btn--2{
+        background: transparent;
+        color: #fff;
+    }
+    .hero__btn--2:hover{
+        background-image: linear-gradient(90deg, var(--very-light-red-gradient) 25%, var(--light-red-gradient));
+        border: 1px solid var(--very-light-red-gradient);
+        color: #fff;
+    }
+    .hero__btn--2:focus{
+        background-image: linear-gradient(90deg, var(--very-light-red-gradient) 25%, var(--light-red-gradient));
+        border: 1px solid var(--very-light-red-gradient);
+        color: #fff;
+    }
+
     
     .content{
         display: flex;
