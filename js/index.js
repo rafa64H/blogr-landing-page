@@ -6,7 +6,10 @@ let dropMenus = document.querySelectorAll('.drop-menu')
 let dropArrowIcons1 = document.querySelectorAll('.drop-arrow1')
 let dropArrowIcons2 = document.querySelectorAll('.drop-arrow2')
 
+let allSectionsAndFooter = document.querySelectorAll('section, footer')
 
+
+/*Open navigation on phones*/
 openNavBtn.addEventListener('click', () => {
     
     if (openNavBtn.dataset.navBtnActive === "false"){
@@ -32,6 +35,7 @@ openNavBtn.addEventListener('click', () => {
 
 })
 
+/*Open drop menus*/
 dropBtns.forEach(allTheDropBtns => {
 
     allTheDropBtns.addEventListener('click', (e) => {
@@ -66,6 +70,7 @@ function openDropMenu(event){
 
 }
 
+/*display none one drop menu after animation of closing ends*/
 dropMenus.forEach(allTheDropMenus => {
     
     allTheDropMenus.addEventListener('animationend', (e) => {
@@ -75,6 +80,28 @@ dropMenus.forEach(allTheDropMenus => {
             delete allTheDropMenus.dataset.dropAnimation
 
         }
+    })
+
+});
+
+
+/*Close drop menus without button*/
+allSectionsAndFooter.forEach(allTheSectionsAndFooters => {
+    
+    allTheSectionsAndFooters.addEventListener('click', (e) => {
+        
+        for(let i = 0; i < dropMenus.length; i++){
+
+            if (dropMenus[i].dataset.dropActive === "true"){
+
+                dropMenus[i].dataset.dropAnimation = "false"
+                dropArrowIcons1[i].dataset.dropArrowActive = "false"
+                dropArrowIcons2[i].dataset.dropArrowActive = "false"
+                dropMenus[i].dataset.dropActive = "false"
+                
+            }
+        }
+
     })
 
 });

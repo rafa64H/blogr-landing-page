@@ -6,6 +6,18 @@ TABLE OF CONTENTS:
     1. root, universal selector and some html tags
 
     2. Header, nav, hero section
+
+    3. Content with editor illustration image
+
+    4. Content with phones illustration
+
+    Content with laptop illustration (on desktop media query)
+
+    5. Footer
+
+    6. Media query
+
+    7. Animation keyframes
 */
 
 /*--1. root, universal selector and some html tags--*/
@@ -136,6 +148,7 @@ header{
     background-image: url('../images/icon-hamburger.svg');
 }
 
+
 nav{
     display: none;
 
@@ -214,12 +227,14 @@ nav{
     background: var(--very-light-red-CTA-hover);
 }
 
+
 #divide-line{
     margin: 1em 0;
     padding: 0.5px 0;
     width: 100%;
     background-color: lightgray;
 }
+
 
 .drop-btn{
     transition: all 350ms;
@@ -230,12 +245,10 @@ nav{
 
 .drop-arrow{
     transform: translateY(100%);
-    user-select: none;
 }
 
 .drop-arrow2{
     display: none;
-    user-select: none;
 }
 
 [data-drop-arrow-active = "true"]{
@@ -333,13 +346,14 @@ nav{
     background: #fff;
     color: var(--light-red-CTA-text);
 }
+/*--2. Header, nav, hero section--*/
 
 
 .title{
     margin: 1.5em;
 }
 
-
+/*--3. Content with illustration editor image--*/
 .content{
     margin: 4em auto;
 }
@@ -380,7 +394,10 @@ nav{
     border-top-right-radius: 15%;
 
 }
+/*--3. Content with illustration editor image END--*/
 
+
+/*--4. Content with phones illustration--*/
 .content2__img{
     display: block;
     margin: 0 auto -11em auto;
@@ -395,7 +412,10 @@ nav{
 
     margin: 1em auto;
 }
+/*--4. Content with phones illustration END--*/
 
+
+/*--5. Footer--*/
 footer{
     background-color: var(--very-dark-black-blue-footer-background);
 
@@ -419,6 +439,7 @@ footer>*{
 .foo1-item__title{
     margin-bottom: 1em;
 
+    color: #fff;
     text-align: center;
 }
 
@@ -450,9 +471,12 @@ footer>*{
 .footer-section2__link:focus{
     text-decoration: underline;
 }
+/*--5. Footer END--*/
 
-/*--------------MEDIA QUERY------------*/
+
+/*--6. Media query--*/
 @media screen and (min-width: 1200px) {
+    /*-------1-------*/
     h3{
         text-align: left;
     }
@@ -468,7 +492,10 @@ footer>*{
     li{
         text-align: left;
     }
+    /*-------1 END-------*/
 
+
+    /*-------2-------*/
     header{
         background-image: url('../images/bg-pattern-intro-desktop.svg'), 
                           linear-gradient(150deg, var(--very-light-red-gradient), var(--light-red-gradient));
@@ -492,6 +519,7 @@ footer>*{
         display: none;
     }
     
+
     nav{
         display: block;
 
@@ -564,10 +592,12 @@ footer>*{
         color: #fff;
     }
     
+
     #divide-line{
         display: none;
     }
     
+
     .drop-btn{
         color: rgb(216, 216, 216);
         font-weight: 900;
@@ -706,8 +736,10 @@ footer>*{
         border: 1px solid var(--very-light-red-gradient);
         color: #fff;
     }
+    /*-------2 END-------*/
 
-    
+
+    /*-------3-------*/
     .content{
         display: flex;
         align-items: center;
@@ -740,8 +772,10 @@ footer>*{
     .text__title{
         margin: 1em auto;
     }
+    /*-------3 END-------*/
 
     
+    /*-------4-------*/
     .content2__bgimg{
         background-image: url('../images/bg-pattern-circles.svg'),
                           linear-gradient(var(--very-dark-gray-blue-gradient), 60%, var(--very-dark-desaturated-blue-gradient));;
@@ -776,8 +810,10 @@ footer>*{
     .content2__title{
         text-align: left;
     }
+    /*-------4 END-------*/
 
 
+    /*-------Content with laptop illustration on desktop-------*/
     .content--laptop-illus{
         margin: 7em auto;
     }
@@ -792,8 +828,10 @@ footer>*{
     .content__text--2{
         order: 2;
     }
+    /*-------Content with laptop illustration on desktop END-------*/
 
     
+    /*-------5-------*/
     footer{
 
         background-color: var(--very-dark-black-blue-footer-background);    
@@ -810,7 +848,7 @@ footer>*{
         justify-content: space-around;
     }
     
-    .section1__logo{
+    .footer-section1__logo{
         display: block;
         
         width: 8%;
@@ -818,52 +856,54 @@ footer>*{
         margin-top: 2em;
     }
     
-    .item__title{
+    .foo1-item__title{
         margin-bottom: 0.8em;
 
         color: #fff;
         text-align: left;
     }
     
-    .item__links{
+    .foo1-item__links{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
     
-    .item__link{
+    .foo1-item_link{
         display: inline-block;
     
         margin: 0.3em 0;
     
         color: var(--grayish-blue-footer-text);
     }
-    .item__link:focus{
+    .foo1-item__link:focus{
         text-decoration: none;
     }
-    .item__link:hover{
+    .foo1-item__link:hover{
         text-decoration: underline;
     }
     
-    .section2__p{
+    .footer-section2__p{
         color: #fff;
 
         text-align: center;
     }
     
-    .section2__link{
+    .footer-section2__link{
         color: #ae8d19;
     }
-    .section2__link:focus{
+    .footer-section2__link:focus{
         text-decoration: none;
     }
-    .section2__link:hover{
+    .footer-section2__link:hover{
         text-decoration: underline;
     }
+    /*-------5 END-------*/
 }
-/*--------------MEDIA QUERY END------------*/
+/*--6. Media query END--*/
 
 
+/*--7. Animation keyframes--*/
 @keyframes nav-active{
     from{
         transform: translateY(-10%);
@@ -925,3 +965,4 @@ footer>*{
         transform: rotate(0deg) translateY(50%);
     }
 }
+/*--7. Animation keyframes--*/
