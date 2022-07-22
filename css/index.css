@@ -505,6 +505,10 @@ footer>*{
     
         border-bottom-left-radius: 20%;
     }
+
+    body{
+        overflow-x: hidden;
+    }
     
     .logo-nav-btn-container{
         display: flex;
